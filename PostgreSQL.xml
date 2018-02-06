@@ -5,21 +5,53 @@
   <Category>Network:Management Productivity: Tools:</Category>
   <Name>PostgreSQL</Name>
   <Project>https://www.postgresql.org/</Project>
-  <Description>PostgreSQL database</Description>
+  <Description>
+    PostgreSQL is a powerful, open source object-relational database system. Based on official Postgres Docker image.
+
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/mnt/cache/appdata/postgres[/b] This is where Postgres will store it's data.[br]
+    [b]Port 5432[/b] Default connection port[br]
+    [b]POSTGRES_PASSWORD[/b] Superuser password. RECOMMENDED TO SET, otherwise connecting outside container will not be possible.[br]
+    [b]POSTGRES_USER[/b] Username for the superuser. Defaults to postgres if not set.[br]
+    [b]POSTGRES_DB[/b] Used to define different name for default database. Defaults to user if not set.[br]
+  </Description>
   <Overview>
     PostgreSQL is a powerful, open source object-relational database system. Based on official Postgres Docker image.
+    Default user is postgres and default password is postgres, you can change them below.
+
+    Default storage is set to the cache drive for better performance. If you do not have one, change it to the user share.
+
   </Overview>
   <Registry>https://registry.hub.docker.com/_/postgres/</Registry>
-  <GitHub>https://github.com/limetech/dockerapp-plex</GitHub>
+  <GitHub>https://github.com/juusujanar/unraid-templates</GitHub>
   <Repository>postgres</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>5432</HostPort>
+        <ContainerPort>5432</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Name>POSTGRES_PASSWORD</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>POSTGRES_USER</Name>
+      <Value>postgres</Value>
+    </Variable>
+    <Variable>
+      <Name>POSTGRES_DB</Name>
+      <Value>postgres</Value>
+    </Variable>
+  </Environment>
   <Data>
     <Volume>
       <HostDir>/mnt/cache/appdata/postgres</HostDir>
