@@ -40,6 +40,8 @@
     </Publish>
   </Networking>
 
+  <Network Default="bridge">bridge</Network>
+
   <Environment>
     <Variable>
       <Name>POSTGRES_PASSWORD</Name>
@@ -68,8 +70,8 @@
 
   <WebUI/>
 
-  <Banner>https://www.postgresql.org/media/img/layout/hdr_left.png</Banner>
-  <Icon>https://www.postgresql.org/media/img/about/press/elephant.png</Icon>
+  <Banner>https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-banner.png</Banner>
+  <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-logo.png</Icon>
 
   <ExtraParams></ExtraParams>
 

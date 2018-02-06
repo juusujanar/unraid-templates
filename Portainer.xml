@@ -37,6 +37,8 @@
       </Port>
     </Publish>
   </Networking>
+
+  <Network Default="bridge">bridge</Network>
   
   <Environment/>
 
@@ -55,8 +57,8 @@
 
   <WebUI>http://[IP]:[PORT:9000]/</WebUI>
 
-  <Banner>https://linuxnewbieguide.org/wp-content/uploads/2017/12/Portainer-large-positive-1.png</Banner>
-  <Icon>https://autoize.com/wp-content/uploads/2017/02/Portainer-logo.png</Icon>
+  <Banner>https://github.com/juusujanar/unraid-templates/raw/master/img/Portainer-banner.png</Banner>
+  <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/Portainer-logo.png</Icon>
 
   <ExtraParams></ExtraParams>
 

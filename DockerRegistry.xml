@@ -37,6 +37,8 @@
     </Publish>
   </Networking>
 
+  <Network Default="bridge">bridge</Network>
+
   <Environment/>
 
   <Data>
@@ -49,8 +51,8 @@
 
   <WebUI/>
 
-  <Banner>https://hub.docker.com/public/images/logos/mini-logo.svg</Banner>
-  <Icon>https://hub.docker.com/public/images/logos/mini-logo.svg</Icon>
+  <Banner>https://github.com/juusujanar/unraid-templates/raw/master/img/DockerRegistry-logo.png</Banner>
+  <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/DockerRegistry-logo.png</Icon>
 
   <ExtraParams></ExtraParams>
 
