@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Containers>
+<Container version="2">
+  <TemplateURL>https://github.com/juusujanar/unraid-templates/blob/master/Redis.xml</TemplateURL>
   <Date>2018-05-06</Date>
   <Beta>False</Beta>
   <Category>Network:Management Productivity: Tools:</Category>
   <Name>Redis</Name>
   <Project>https://redis.io/</Project>
+
   <Description>
     Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs and geospatial indexes with radius queries. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster. Uses official Redis Docker image @ https://hub.docker.com/_/redis/
     [br][br]
@@ -15,12 +17,14 @@
   <Overview>
     Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. Based on official Redis Docker image.
   </Overview>
+
   <Registry>https://registry.hub.docker.com/_/redis/</Registry>
   <GitHub>https://github.com/docker-library/redis</GitHub>
   <Repository>redis</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
+
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -31,11 +35,19 @@
       </Port>
     </Publish>
   </Networking>
-  <Environment>
-  </Environment>
-  <Data>
-  </Data>
-  <WebUI></WebUI>
+
+  <Environment/>
+  <Data/>
+  <WebUI/>
+
   <Banner>http://download.redis.io/logocontest/82.png</Banner>
   <Icon>https://cdn.worldvectorlogo.com/logos/redis.svg</Icon>
-</Containers>
+
+  <Network Default="bridge">bridge</Network>
+
+  <Config Type="Port" Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Display="always-hide" Required="true"
+       Description="This is Redis default connection port.">6379</Config>
+
+  <ExtraParams></ExtraParams>
+  
+</Container>
