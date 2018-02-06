@@ -20,7 +20,7 @@
     PostgreSQL is a powerful, open source object-relational database system. Based on official Postgres Docker image.
   </Overview>
   <Registry>https://registry.hub.docker.com/_/postgres/</Registry>
-  <GitHub>https://github.com/juusujanar/unraid-templates</GitHub>
+  <GitHub>https://github.com/docker-library/postgres</GitHub>
   <Repository>postgres</Repository>
   <Support></Support>
   <BindTime>true</BindTime>

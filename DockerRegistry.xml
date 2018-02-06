@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Date>2018-05-06</Date>
+  <Beta>False</Beta>
+  <Category>Network:Management Productivity: Tools:</Category>
+  <Name>Registry</Name>
+  <Project>https://github.com/docker/distribution</Project>
+  <Description>
+    Docker Registry is used to store and distribute Docker images using HTTP API. This allows you host your own private Registry and store your images. Uses official Docker Registry image @ https://hub.docker.com/_/registry/
+    [br][br]
+
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/mnt/user/appdata/registry[/b] This is where Registry will store it's data.[br]
+    [b]Port 5000[/b] Default connection port[br]
+  </Description>
+  <Overview>
+    Docker Registry is used to store and distribute Docker images using HTTP API. This allows you host your own private Registry and store your images.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/_/registry/</Registry>
+  <GitHub>https://github.com/docker/distribution-library-image</GitHub>
+  <Repository>registry</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/registry</HostDir>
+      <ContainerDir>/var/lib/registry</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Banner>https://hub.docker.com/public/images/logos/mini-logo.svg</Banner>
+  <Icon>https://hub.docker.com/public/images/logos/mini-logo.svg</Icon>
+</Containers>
