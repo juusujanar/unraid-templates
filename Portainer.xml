@@ -48,6 +48,6 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:9000]/</WebUI>
-  <Banner></Banner>
-  <Icon>https://portainer.io/images/logo.png</Icon>
+  <Banner>https://linuxnewbieguide.org/wp-content/uploads/2017/12/Portainer-large-positive-1.png</Banner>
+  <Icon>https://autoize.com/wp-content/uploads/2017/02/Portainer-logo.png</Icon>
 </Containers>
