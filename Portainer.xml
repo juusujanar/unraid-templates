@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Date>2018-05-06</Date>
+  <Beta>False</Beta>
+  <Category>Network:Management Productivity: Tools:</Category>
+  <Name>Portainer</Name>
+  <Project>https://portainer.io</Project>
+  <Description>
+    Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.
+    [br][br]
+
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/mnt/user/appdata/portainer[/b] This is where Portainer will store it's data.[br]
+    [b]/var/run/docker.sockr[/b] Portainer uses this to get Docker information from unRAID host.[br]
+    [b]Port 9000[/b] Default WebUI port[br]
+  </Description>
+  <Overview>
+    Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/u/portainer/portainer/</Registry>
+  <GitHub>https://github.com/portainer/portainer</GitHub>
+  <Repository>portainer/portainer</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/portainer</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:9000]/</WebUI>
+  <Banner></Banner>
+  <Icon>https://portainer.io/images/logo.png</Icon>
+</Containers>
