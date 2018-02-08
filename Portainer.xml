@@ -6,7 +6,6 @@
   <Category>Network:Management Productivity: Tools:</Category>
   <Name>Portainer</Name>
   <Project>https://portainer.io</Project>
-
   <Description>
     Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.
     [br][br]
@@ -19,14 +18,12 @@
   <Overview>
     Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.
   </Overview>
-
   <Registry>https://registry.hub.docker.com/u/portainer/portainer/</Registry>
   <GitHub>https://github.com/portainer/portainer</GitHub>
   <Repository>portainer/portainer</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -37,11 +34,8 @@
       </Port>
     </Publish>
   </Networking>
-
   <Network Default="bridge">bridge</Network>
-  
   <Environment/>
-
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/portainer</HostDir>
@@ -54,21 +48,11 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-
   <WebUI>http://[IP]:[PORT:9000]/</WebUI>
-
   <Banner>https://github.com/juusujanar/unraid-templates/raw/master/img/Portainer-banner.png</Banner>
   <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/Portainer-logo.png</Icon>
-
   <ExtraParams></ExtraParams>
-
-  <Config Type="Path" Name="Config Storage Path" Target="/data" Default="/mnt/user/appdata/portainer" Mode="rw" Display="advanced-hide" Required="true"
-       Description="This is where Portainer will store it's configuration.">/mnt/user/appdata/portainer</Config>
-
-  <Config Type="Path" Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Display="advanced-hide" Required="true"
-       Description="This is needed for Portainer to connect to Docker.">/var/run/docker.sock</Config>
-
-  <Config Type="Port" Name="Web Interface Port" Target="9000" Default="9000" Mode="tcp" Display="always-hide" Required="true"
-       Description="This is Portainer WebUI port.">9000</Config>
-
+  <Config Type="Path" Name="Config Storage Path" Target="/data" Default="/mnt/user/appdata/portainer" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Portainer will store it's configuration.">/mnt/user/appdata/portainer</Config>
+  <Config Type="Path" Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Display="advanced-hide" Required="true" Description="This is needed for Portainer to connect to Docker.">/var/run/docker.sock</Config>
+  <Config Type="Port" Name="Web Interface Port" Target="9000" Default="9000" Mode="tcp" Display="always-hide" Required="true" Description="This is Portainer WebUI port.">9000</Config>
 </Container>
