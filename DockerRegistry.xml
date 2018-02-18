@@ -20,7 +20,7 @@
   <Registry>https://registry.hub.docker.com/_/registry/</Registry>
   <GitHub>https://github.com/docker/distribution-library-image</GitHub>
   <Repository>registry</Repository>
-  <Support></Support>
+  <Support>https://lime-technology.com/forums/topic/69492-support-jj9987-docker-registry/</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
