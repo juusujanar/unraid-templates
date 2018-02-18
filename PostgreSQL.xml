@@ -23,7 +23,7 @@
   <Registry>https://registry.hub.docker.com/_/postgres/</Registry>
   <GitHub>https://github.com/docker-library/postgres</GitHub>
   <Repository>postgres</Repository>
-  <Support></Support>
+  <Support>https://lime-technology.com/forums/topic/69483-support-jj9987-postgresql/</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
