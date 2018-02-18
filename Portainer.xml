@@ -21,7 +21,7 @@
   <Registry>https://registry.hub.docker.com/u/portainer/portainer/</Registry>
   <GitHub>https://github.com/portainer/portainer</GitHub>
   <Repository>portainer/portainer</Repository>
-  <Support></Support>
+  <Support>https://lime-technology.com/forums/topic/69491-support-jj9987-portainer/</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
