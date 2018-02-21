@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <TemplateURL>https://github.com/juusujanar/unraid-templates/blob/master/Minio.xml</TemplateURL>
+  <Date>2018-02-21</Date>
+  <Beta>False</Beta>
+  <Category>Network:Management Productivity: Tools:</Category>
+  <Name>Minio</Name>
+  <Project>https://minio.io/</Project>
+  <Description>
+    Minio is an object storage server released under Apache License v2.0. It is compatible with Amazon S3 cloud storage service. It is best suited for storing unstructured data such as photos, videos, log files, backups and container / VM images. Size of an object can range from a few KBs to a maximum of 5TB.
+
+    Minio server is light enough to be bundled with the application stack, similar to NodeJS, Redis and MySQL.
+
+    Uses official Minio Docker image @ https://hub.docker.com/r/minio/minio/
+    [br][br]
+
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]Port 9000[/b] Default connection port[br]
+  </Description>
+  <Overview>
+    Minio is an object storage server that is compatible with Amazon S3 cloud storage service.
+  </Overview>
+  <Registry>https://hub.docker.com/r/minio/minio/</Registry>
+  <GitHub>https://github.com/minio/minio</GitHub>
+  <Repository>minio/minio</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Network Default="bridge">bridge</Network>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minio/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minio/config</HostDir>
+      <ContainerDir>/root/.minio</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:9000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/img/Minio-logo.png</Icon>
+  <Config Type="Port" Name="Minio Port" Target="9000" Default="9000" Mode="tcp" Display="always-hide" Required="true" Description="This is Minio default connection port.">9000</Config>
+  <Config Type="Path" Name="Config Storage Path" Target="/root/.minio" Default="/mnt/user/appdata/minio/config" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Minio will store it's configuration.">/mnt/user/appdata/minio/config</Config>
+  <Config Type="Path" Name="Config Storage Path" Target="/data" Default="/mnt/user/appdata/minio/data" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Minio will store the data.">/mnt/user/appdata/minio/data</Config>
+  <ExtraParams>server /data</ExtraParams>
+</Container>
