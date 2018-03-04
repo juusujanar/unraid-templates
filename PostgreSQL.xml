@@ -54,7 +54,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/cache/appdata/postgres</HostDir>
-      <ContainerDir>/var/lib/postgresql</ContainerDir>
+      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -62,6 +62,6 @@
   <Banner>https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-banner.png</Banner>
   <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-logo.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Database Storage Path" Target="/var/lib/postgresql" Default="/mnt/cache/appdata/postgres" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Postgres will store it's data.">/mnt/cache/appdata/postgres</Config>
+  <Config Type="Path" Name="Database Storage Path" Target="/var/lib/postgresql/data" Default="/mnt/cache/appdata/postgres" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Postgres will store it's data.">/mnt/cache/appdata/postgres</Config>
   <Config Type="Port" Name="Web Interface Port" Target="5432" Default="5432" Mode="tcp" Display="always-hide" Required="true" Description="This is Postgres TCP connection port.">5432</Config>
 </Container>
