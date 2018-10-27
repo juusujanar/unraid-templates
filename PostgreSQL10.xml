@@ -4,7 +4,7 @@
   <Date>2018-05-06</Date>
   <Beta>False</Beta>
   <Category>Network:Management Productivity: Tools:</Category>
-  <Name>PostgreSQL</Name>
+  <Name>Postgres10</Name>
   <Project>https://www.postgresql.org/</Project>
   <Description>
     PostgreSQL is a powerful, open source object-relational database system. Uses official Postgres Docker image @ https://hub.docker.com/_/postgres/
@@ -22,7 +22,7 @@
   </Overview>
   <Registry>https://registry.hub.docker.com/_/postgres/</Registry>
   <GitHub>https://github.com/docker-library/postgres</GitHub>
-  <Repository>postgres</Repository>
+  <Repository>postgres:10</Repository>
   <Support>https://lime-technology.com/forums/topic/69483-support-jj9987-postgresql/</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
