@@ -23,7 +23,7 @@
   <Overview>
     Bash script running as cronjob in Docker to update CloudFlare DNS records.
   </Overview>
-  <Registry>https://registry.hub.docker.com/janarj/cloudflare-ddns/</Registry>
+  <Registry>https://cloud.docker.com/repository/docker/janarj/cloudflare-ddns</Registry>
   <GitHub>https://github.com/juusujanar/cloudflare-ddns</GitHub>
   <Repository>janarj/cloudflare-ddns:1.1</Repository>
   <Support></Support>
