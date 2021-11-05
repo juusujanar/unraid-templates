@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <TemplateURL>https://github.com/juusujanar/unraid-templates/blob/master/PortainerCE.xml</TemplateURL>
+  <Date>2021-11-05</Date>
+  <Beta>False</Beta>
+  <Category>Network:Management Productivity: Tools:</Category>
+  <Name>Portainer</Name>
+  <Project>https://portainer.io</Project>
+  <Overview>
+    Portainer hides the complexity of managing containers behind an easy-to-use UI.[br]
+    By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
+    [br][br]
+
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/mnt/user/appdata/portainer[/b] This is where Portainer will store it's data.[br]
+    [b]/var/run/docker.sockr[/b] Portainer uses this to get Docker information from unRAID host.[br]
+    [b]Port 8000[/b] TCP tunnel server[br]
+    [b]Port 9443[/b] Secure (HTTPS) WebUI port, default uses self-signed certificate[br]
+  </Overview>
+  <Registry>https://registry.hub.docker.com/u/portainer/portainer-ce/</Registry>
+  <GitHub>https://github.com/portainer/portainer</GitHub>
+  <Repository>registry.hub.docker.com/portainer/portainer-ce</Repository>
+  <Support>https://lime-technology.com/forums/topic/69491-support-jj9987-portainer/</Support>
+  <WebUI>https://[IP]:[PORT:9443]/</WebUI>
+  <Banner>https://github.com/juusujanar/unraid-templates/raw/master/img/Portainer-banner.png</Banner>
+  <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/Portainer-logo.png</Icon>
+  <Privileged>false</Privileged>
+  <Network Default="bridge">bridge</Network>
+  <Config Type="Path" Name="Config Storage Path" Target="/data" Default="/mnt/user/appdata/portainer" Mode="rw" Display="always" Required="true" Description="Portainer configuration location"/>
+  <Config Type="Path" Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Display="always" Required="true" Description="Portainer connection to Docker Unix socket"/>
+  <Config Type="Port" Name="TCP tunnel server" Target="8000" Default="8000" Mode="tcp" Display="always" Required="true" Description="TCP tunnel server"/>
+  <Config Type="Port" Name="Web Interface Port" Target="9443" Default="9443" Mode="tcp" Display="always" Required="true" Description="HTTPS WebUI port"/>
+</Container>
