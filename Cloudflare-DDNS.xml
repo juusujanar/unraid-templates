@@ -7,6 +7,8 @@
   <Name>Cloudflare-DDNS</Name>
   <Project>https://github.com/juusujanar/cloudflare-ddns</Project>
   <Description>
+    NB!: This is deprecated and not actively maintained.
+
     Bash script running as cronjob in Docker to update CloudFlare DNS records.
     [br][br]
 
