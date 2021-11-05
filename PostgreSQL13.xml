@@ -26,9 +26,9 @@
   <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-logo.png</Icon>
   <Privileged>false</Privileged>
   <Network Default="bridge">bridge</Network>
-  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Container Variable: POSTGRES_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Container Variable: POSTGRES_USER" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Container Variable: POSTGRES_DB" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Initial database name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Type="Path" Name="Database Storage Path" Target="/var/lib/postgresql/data" Default="/mnt/cache/appdata/postgresql13" Mode="rw" Display="always" Required="true" Description="PostgreSQL data storage location"/>
   <Config Type="Port" Name="Web Interface Port" Target="5432" Default="5432" Mode="tcp" Display="always-hide" Required="true" Description="PostgreSQL TCP connection port"/>
 </Container>
