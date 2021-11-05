@@ -1,51 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <TemplateURL>https://github.com/juusujanar/unraid-templates/blob/master/DockerRegistry.xml</TemplateURL>
-  <Date>2018-05-06</Date>
+  <Date>2021-11-05</Date>
   <Beta>False</Beta>
   <Category>Cloud: Network:Management Productivity: Tools:</Category>
   <Name>DockerRegistry</Name>
-  <Project>https://github.com/docker/distribution</Project>
-  <Description>
+  <Project>https://github.com/distribution/distribution</Project>
+  <Overview>
     Docker Registry is used to store and distribute Docker images using HTTP API. This allows you host your own private Registry and store your images. Uses official Docker Registry image @ https://hub.docker.com/_/registry/
     [br][br]
 
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     [b]/mnt/user/appdata/registry[/b] This is where Registry will store it's data.[br]
     [b]Port 5000[/b] Default connection port[br]
-  </Description>
-  <Overview>
-    Docker Registry is used to store and distribute Docker images using HTTP API. This allows you host your own private Registry and store your images.
   </Overview>
   <Registry>https://registry.hub.docker.com/_/registry/</Registry>
   <GitHub>https://github.com/docker/distribution-library-image</GitHub>
-  <Repository>registry</Repository>
+  <Repository>registry:2</Repository>
   <Support>https://lime-technology.com/forums/topic/69492-support-jj9987-docker-registry/</Support>
-  <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>5000</HostPort>
-        <ContainerPort>5000</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Network Default="bridge">bridge</Network>
-  <Environment/>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/registry</HostDir>
-      <ContainerDir>/var/lib/registry</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
   <WebUI/>
   <Banner>https://github.com/juusujanar/unraid-templates/raw/master/img/DockerRegistry-logo.png</Banner>
   <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/DockerRegistry-logo.png</Icon>
-  <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Data Storage Path" Target="/var/lib/registry" Default="/mnt/user/appdata/registry" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Docker Registry will store it's data.">/mnt/user/appdata/registry</Config>
-  <Config Type="Port" Name="Web Port" Target="5000" Default="5000" Mode="tcp" Display="always-hide" Required="true" Description="This is Docker Registry TCP port.">5000</Config>
+  <Privileged>false</Privileged>
+  <Network Default="bridge">bridge</Network>
+  <Config Type="Path" Name="Data Storage Path" Target="/var/lib/registry" Default="/mnt/user/appdata/registry" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Docker Registry will store it's data."/>
+  <Config Type="Port" Name="Web Port" Target="5000" Default="5000" Mode="tcp" Display="always-hide" Required="true" Description="This is Docker Registry TCP port."/>
 </Container>
