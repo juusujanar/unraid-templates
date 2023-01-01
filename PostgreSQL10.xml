@@ -11,7 +11,7 @@
     [br][br]
 
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-    [b]/mnt/cache/appdata/postgresql14[/b] This is where Postgres will store it's data. For best performance, keep the files on cache drive.[br]
+    [b]/mnt/cache/appdata/postgresql10[/b] This is where Postgres will store it's data. For best performance, keep the files on cache drive.[br]
     [b]Port 5432[/b] Default connection port[br]
     [b]POSTGRES_PASSWORD[/b] Superuser password. [b]REQUIRED TO SET[/b], otherwise connecting outside container will not be possible.[br]
     [b]POSTGRES_USER[/b] Username for the superuser. Defaults to postgres if not set.[br]
