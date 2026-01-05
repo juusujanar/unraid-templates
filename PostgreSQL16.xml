@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <TemplateURL>https://github.com/juusujanar/unraid-templates/blob/master/PostgreSQL16.xml</TemplateURL>
+  <Date>2026-01-05</Date>
+  <Beta>False</Beta>
+  <Category>Network:Management Productivity: Tools:</Category>
+  <Name>postgresql16</Name>
+  <Project>https://www.postgresql.org/</Project>
+  <Overview>
+    PostgreSQL 16 is a powerful, open source object-relational database system. Uses official Postgres Docker image @ https://hub.docker.com/_/postgres/
+    [br][br]
+
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/mnt/cache/appdata/postgresql16[/b] This is where Postgres will store it's data. For best performance, keep the files on cache drive.[br]
+    [b]Port 5432[/b] Default connection port[br]
+    [b]POSTGRES_PASSWORD[/b] Superuser password. [b]REQUIRED TO SET[/b], otherwise connecting outside container will not be possible.[br]
+    [b]POSTGRES_USER[/b] Username for the superuser. Defaults to postgres if not set.[br]
+    [b]POSTGRES_DB[/b] Used to define different name for default database. Defaults to user if not set.[br]
+  </Overview>
+  <Registry>https://registry.hub.docker.com/_/postgres/</Registry>
+  <GitHub>https://github.com/docker-library/postgres</GitHub>
+  <Repository>registry.hub.docker.com/library/postgres:16</Repository>
+  <Support>https://lime-technology.com/forums/topic/69483-support-jj9987-postgresql/</Support>
+  <WebUI/>
+  <Banner>https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-banner.png</Banner>
+  <Icon>https://github.com/juusujanar/unraid-templates/raw/master/img/PostgreSQL-logo.png</Icon>
+  <Privileged>false</Privileged>
+  <Network Default="bridge">bridge</Network>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Initial database name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Type="Path" Name="Database Storage Path" Target="/var/lib/postgresql/data" Default="/mnt/cache/appdata/postgresql16" Mode="rw" Display="always" Required="true" Description="PostgreSQL data storage location"/>
+  <Config Type="Port" Name="PostgreSQL access port" Target="5432" Default="5432" Mode="tcp" Display="always-hide" Required="true" Description="PostgreSQL TCP connection port"/>
+</Container>
